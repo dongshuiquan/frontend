@@ -1,0 +1,539 @@
+﻿
+body {
+	font-family: "Work Sans", sans-serif;
+	background-color: #ffffff;
+	color: #333333;
+	font-size: 15px;
+	line-height: 24px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Work Sans", sans-serif;
+	color: #333333;
+	line-height: 1;
+	font-size: 400;
+}
+
+p {
+	font-family: "Work Sans", sans-serif;
+	color: #333333;
+	font-size: 15px;
+	line-height: 24px;
+}
+
+ul {
+	margin:0px;
+	padding: 0px;
+	list-style: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+.img-full {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	display: block;
+}
+
+a {
+	color: #333333;
+}
+
+a:hover {
+	color: #fed100 !important;
+	text-decoration: none;
+}
+a,
+a:hover,
+a:focus,
+a:active,
+button,
+button:focus,
+input,
+select,
+textarea {
+  outline: none;
+}
+
+/* Category Menu*/
+.category-menu {
+	position: relative;
+}
+
+.category-menu .category-heading {
+	background: #fed100;
+	position: relative;
+	cursor: pointer;
+	padding: 20px 0;
+	border-radius: 25px 25px 0 ;
+}
+
+.category-menu .category-heading > h2 {
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+}
+
+.category-menu .category-heading > h2:after {
+	content: "\f03c";
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 600;
+	position: absolute;
+	top: 22px;
+	left: 20px;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+	.category-menu .category-heading > h2:after {
+		left: 10px;
+	}
+}
+
+.catefory-menu .category-heading > h2 > span {
+	padding-left: 50px;
+	font-weight: 600;
+}
+
+@media (max-width : 1199px) {
+	.category-menu .category-heading > h2 > span {
+		padding-left: 40px;
+	}
+}
+
+@media only screen adn (min-widtht: 992px) and (max-width: 1199px) {
+	.category-menu .category-heading > h2 > span {
+		padding-left: 30px;
+	}
+}
+
+.category-menu .category-menu-list {
+	background: #ffffff;
+	border: 2px solid #fed100;
+	border-radius: 0 0 25px 25px;
+	padding: 0 20px;
+	position: absolute;
+	left: 0;
+	top: calc(100% -1px);
+	display: block;
+	width: 100%;
+	z-index: 99;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+	.category-menu .category-menu-list{
+		padding: 0 15px;
+	}
+}
+
+.category-menu .category-menu-list > ul > li {
+	position: relative;
+	border-bottom: 1px solid #ebebeb;
+}
+
+.category-menu .category-menu-list > ul > li > a {
+	display: block;
+	text-transform: capitalize;
+	overflow: hidden;
+	font-size: 14px;
+	font-weight: 600;
+	padding: 10px 0;
+}
+
+.category-menu .category-menu-list > ul > li:hover .cat-mega-menu,
+.category-menu .category-menu-list > ul > li:hover .cat-dropdown_menu {
+	opacity: 1;
+	-ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	visibility: visible;
+}
+
+.category-menu .category-menu-list > ul > li:hover > a{
+	color: #fed100;
+}
+
+.category-menu .category-menu-list > ul > li.right-menu > a:after {
+	content: '\f054';
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 600;
+	font-size: 12px;
+	position: absolute;
+	top: 15px;
+	right: 0;
+}
+
+.category-menu .category-menu-list > ul >li.rx-child {
+	display: none;
+}
+
+.category-menu .category-menu-list > ul > li.rx-parent {
+	cursor: pointer;
+}
+
+.category-menu .category-menu-list > ul >li.rx-parent a.rx-show {
+	display: none;
+}
+
+.category-menu .category-menu-list > ul > li.rx-parent.rx-change a.rx-default {
+	display: none;
+}
+
+.category-menu .category-menu-list > ul > li.rx-parent.rx-change a.rx-show {
+	display: block;
+}
+
+.cat-mega-menu {
+	background: #ffffff;
+	position: absolute;
+	top: 0;
+	left: 110%;
+	z-index: 999;
+	width: 220px;
+	-webkit-box-shodow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
+	opacity: 0;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	visibility: hidden;
+	width: 640px;
+	padding: 30px;
+	overflow: hidden;
+}
+
+.cat-mega-menu > li.right-menu {
+	width: 33.333%;
+	float: left;
+}
+
+.cat-mega-menu > li.cat-mega-title > a {
+	font-wight: 600;
+	text-transform: uppercase;
+	font-size: 16px;
+	margin-bottom: 15px;
+	display: block;
+	line-height: 20px;
+	position: relative;
+}
+
+.cat-mega-menu > li.cat-mega-title > a:hover {
+	color: #ffffff;
+}
+
+.cat-mega-menu > li > ul > li > a {
+	font-size: 14px;
+	display: block;
+	line-height: 30px;
+	font-weight: 400;
+	color: #666666;
+	text-transform: capitalize;
+}
+
+.cat-mega-menu > li > ul > li > a:hover {
+	color: #58d173;
+}
+
+.cat-mega-menu.cat-mega-menu-2 {
+	width: 840px;
+}
+
+.cat-mega-menu.cat-mega-menu-2 > li.right-menu {
+	width: 25%;
+}
+
+/* ---Category Dropdown Menu--- */
+
+
+
+
+
+/* ---Base Transition--- */
+a,
+button, .global-overlay, .quantity .cart-plus-minus > .qtybutton,
+.group-quantity .cart-plus-minus > .qtybutton, .price-filter .ui-slider-handle, .price-filter .price-slider-amount .label-input .filter-btn, .img-hover_effect a img, #Instafeed > li > a, #Instafeed > li > a:before, #Instafeed > li > a:after, .popup_wrapper, .popup_wrapper .test .popup_off, .popup_wrapper .test .popup_off > i, .popup_wrapper .subscribe_area .subscribe-form-group form button, .umino-btn,
+.umino-banner_btn,
+.umino-btn-bondi_blue,
+.umino-btn_fullwidth,
+.umino-compare_btn,
+.umino-filter_btn,
+.umino-btn_dark,
+.umino-btn_red,
+.umino-btn_yellow,
+.umino-btn_limerick,
+.umino-slider_btn, .mobile-menu_wrapper .offcanvas-menu-inner,
+.offcanvas-search_wrapper .offcanvas-menu-inner, .btn-close, .btn-close > i, .offcanvas-navigation .mobile-menu li > .menu-expand, .category-menu .category-menu-list > ul > li.right-menu > a:after, .cat-mega-menu, .cat-dropdown_menu, .umino-brand_area .umino-brand_nav .umino-brand_slider .slide-item > a > img, .umino-product_slider .slide-item .single-product,
+.umino-product_slider-2 .slide-item .single-product,
+.umino-product_slider-3 .slide-item .single-product,
+.umino-product_slider-4 .slide-item .single-product,
+.umino-product-tab_slider .slide-item .single-product,
+.umino-product-tab_slider-2 .slide-item .single-product,
+.umino-content_wrapper .slide-item .single-product, .umino-product_slider .slide-item .single-product .product-img .add-actions > ul > li,
+.umino-product_slider-2 .slide-item .single-product .product-img .add-actions > ul > li,
+.umino-product_slider-3 .slide-item .single-product .product-img .add-actions > ul > li,
+.umino-product_slider-4 .slide-item .single-product .product-img .add-actions > ul > li,
+.umino-product-tab_slider .slide-item .single-product .product-img .add-actions > ul > li,
+.umino-product-tab_slider-2 .slide-item .single-product .product-img .add-actions > ul > li,
+.umino-content_wrapper .slide-item .single-product .product-img .add-actions > ul > li, .umino-product_slider .slick-dots li,
+.umino-product_slider-2 .slick-dots li,
+.umino-product_slider-3 .slick-dots li,
+.umino-product_slider-4 .slick-dots li,
+.umino-product-tab_slider .slick-dots li,
+.umino-product-tab_slider-2 .slick-dots li,
+.umino-content_wrapper .slick-dots li, .multiple-product_area .umino-product_slider-4 .slick-dots li, .newsletter-form_wrap .subscribe-form .newsletter-btn, .umino-product-tab_area .umino-product-tab_nav .product-tab > ul.product-menu > li > a.active, .umino-product-tab_area-2 .product-tab_wrap .product-tab > ul > li > a > img, .modal-wrapper.modal, .modal-wrapper .modal-dialog .modal-content .modal-body .close, .modal-wrapper .modal-dialog .modal-content .modal-body .modal-inner-area .sp-img_slider-nav .slick-list .single-slide, .slider-navigation_style-4 .slick-arrow, .sp-img_slider-2 a > i, .main-slider .slick-dots li, .header-middle_area .hm-searchbox .umino-search_btn > i, .hm-minicart_area > ul > li .minicart-body, .hm-minicart_area > ul > li .minicart-body > li .minicart-single_item .product-item_remove, .hm-minicart_area > ul > li .minicart-body > li .minicart-single_item .minicart-img, .header-bottom_area .main-menu_area > nav > ul > li .hm-dropdown, .header-bottom_area .main-menu_area > nav > ul > li > ul > li > a > i, .header-bottom_area .main-menu_area > nav > ul > li.megamenu-holder .umino-megamenu, .header-bottom_area .main-menu_area > nav > ul > li > a:before, .umino-content_wrapper .umino-sidebar-catagories_area .umino-sidebar_categories .sidebar-categories_menu ul li > ul li, .umino-content_wrapper .umino-sidebar-catagories_area .umino-sidebar_categories .sidebar-categories_menu ul li > a > i, .umino-content_wrapper .shop-product-wrap > [class*="col-"], .sp-area .sp-nav .sp-content .page-navigation > a, .sp-area .sp-nav .sp-content .qty-btn_area > ul li > a.qty-btn, .sp-area .sp-nav .sp-content .qty-btn_area > ul li > a > i, .sp-gallery_area .sp-nav .sp-gallery .lg-image, .sp-tab_area .product-tab .product-menu > li > a:before, .blog-grid-view_area .blog-item_wrap .blog-item .blog-img .post-category > ul > li > a, .umino-blog-details .blog-item .blog-img .post-category > ul > li > a, .umino-blog-details .umino-tag-line a, .umino-blog-details .umino-blog-comment-wrapper form .comment-post-box .comment-btn_wrap .umino-post-btn_area .umino-post_btn, .myaccount-tab-content, .login-form .check-box input[type="checkbox"] + label:before, .login-form .check-box input[type="checkbox"] + label:after, .umino-login_btn,
+.umino-register_btn, .table-content table td.umino-cart_btn a, .coupon-all .coupon input.button,
+.coupon-all .coupon2 input.button, .cart-page-total a, .coupon-accordion span, .coupon-accordion .coupon-content .coupon-info p.form-row input[type="submit"], .order-button-payment input, .compare-table .table tbody tr, .contact-main-page .contact-form-content .contact-form .form-group .umino-contact-form_btn, .main-content_area .accordion-with-testimonials_area .accordion-area .about-us_accordion #accordion .card .card-header, .main-content_area .accordion-with-testimonials_area .testimonials-area .testimonial-slider .slick-dots li, .error404-area .search-error-wrapper .umino-error_btn {
+  -webkit-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+
+
+/*----------------------------------------*/
+/*  29 - Pages - Shop
+/*----------------------------------------*/
+.umino-content_wrapper {
+  padding: 55px 0 60px;
+  /* ---Umino's Sidebar Categories--- */
+  /* ---Shop Banner Area--- */
+  /* ---Shop Toolbar--- */
+  /* ---Shop Product Wrap--- */
+  /* ---Shop Paginatoin Area--- */
+}
+
+@media (max-width: 991px) {
+  .umino-content_wrapper .umino-sidebar-catagories_area {
+    padding-top: 60px;
+  }
+}
+
+.umino-content_wrapper .umino-sidebar-catagories_area .umino-sidebar_categories {
+  background-color: #ffffff;
+}
+
+.umino-content_wrapper .umino-sidebar-catagories_area .umino-sidebar_categories .umino-categories_title {
+  border-bottom: 1px solid #ebebeb;
+  position: relative;
+  padding-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.umino-content_wrapper .umino-sidebar-catagories_area .umino-sidebar_categories .umino-categories_title.first-child {
+  padding-top: 0;
+}
+
+.umino-content_wrapper .umino-sidebar-catagories_area .umino-sidebar_categories .umino-categories_title h5 {
+  margin-bottom: 0;
+  padding-bottom: 25px;
+}
+
+.umino-content_wrapper .umino-sidebar-catagories_area .umino-sidebar_categories .umino-categories_title h5:after {
+  height: 2px;
+  bottom: -2px;
+}
+
+.umino-content_wrapper .umino-sidebar-catagories_area .umino-sidebar_categories .umino-categories_title.umino-tags_title {
+  margin-bottom: 30px;
+  padding-top: 25px;
+}
+
+.umino-content_wrapper .umino-sidebar-catagories_area .umino-sidebar_categories .sidebar-checkbox_list > li {
+  padding-bottom: 15px;
+}
+
+.umino-content_wrapper .umino-sidebar-catagories_area .umino-sidebar_categories .sidebar-checkbox_list > li:first-child {
+  padding-top: 0;
+}
+
+.umino-content_wrapper .umino-sidebar-catagories_area .umino-sidebar_categories .sidebar-checkbox_list > li:last-child {
+  padding-bottom: 0;
+}
+
+.umino-content_wrapper .umino-sidebar-catagories_area .umino-sidebar_categories .sidebar-checkbox_list > li > a {
+  vertical-align: middle;
+}
+
+.umino-content_wrapper .umino-sidebar-catagories_area .umino-sidebar_categories .sidebar-categories_menu ul li {
+  cursor: pointer;
+}
+
+.umino-content_wrapper .umino-sidebar-catagories_area .umino-sidebar_categories .sidebar-categories_menu ul li:first-child {
+  padding-top: 20px;
+}
+
+.umino-content_wrapper .umino-sidebar-catagories_area .umino-sidebar_categories .sidebar-categories_menu ul li:last-child > a {
+  padding-bottom: 0;
+}
+
+.umino-content_wrapper .umino-sidebar-catagories_area .umino-sidebar_categories .sidebar-categories_menu ul li.has-sub ul > li:first-child {
+  padding-top: 0;
+}
+
+.umino-content_wrapper .umino-sidebar-catagories_area .umino-sidebar_categories .sidebar-categories_menu ul li:hover > a {
+  color: #fed100;
+}
+
+.umino-content_wrapper .umino-sidebar-catagories_area .umino-sidebar_categories .sidebar-categories_menu ul li:hover > a > i {
+  color: #fed100;
+}
+
+.umino-content_wrapper .umino-sidebar-catagories_area .umino-sidebar_categories .sidebar-categories_menu ul li > ul {
+  display: none;
+}
+
+.umino-content_wrapper .umino-sidebar-catagories_area .umino-sidebar_categories .sidebar-categories_menu ul li > ul li a {
+  display: inline-block;
+  padding-bottom: 20px;
+  padding-left: 15px;
+  color: #999999;
+}
+
+.umino-content_wrapper .umino-sidebar-catagories_area .umino-sidebar_categories .sidebar-categories_menu ul li > ul li:last-child > a {
+  padding-bottom: 25px;
+}
+
+.umino-content_wrapper .umino-sidebar-catagories_area .umino-sidebar_categories .sidebar-categories_menu ul li > a {
+  display: block;
+  padding-bottom: 20px;
+  position: relative;
+  line-height: 1;
+}
+
+.umino-content_wrapper .umino-sidebar-catagories_area .umino-sidebar_categories .sidebar-categories_menu ul li > a > i {
+  font-size: 16px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+  color: #999999;
+}
+
+.umino-content_wrapper .umino-sidebar-catagories_area .umino-sidebar_categories .sidebar-categories_menu ul li.open > a > i {
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.umino-content_wrapper .umino-sidebar-catagories_area .umino-sidebar_categories.sidebar-banner_area {
+  padding-top: 30px;
+}
+
+.umino-content_wrapper .umino-sidebar-catagories_area .umino-sidebar_categories.sidebar-banner_area.umino-banner_area .banner-item .banner-content-2 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 70%;
+  text-align: center;
+}
+
+@media (max-width: 1199px) {
+  .umino-content_wrapper .umino-sidebar-catagories_area .umino-sidebar_categories.sidebar-banner_area.umino-banner_area .banner-item .banner-content-2 {
+    width: 90%;
+  }
+}
+
+.umino-content_wrapper .umino-sidebar-catagories_area .umino-sidebar_categories.umino-list-product_area {
+  padding-top: 5px;
+  padding-bottom: 0;
+}
+
+.umino-content_wrapper .umino-sidebar-catagories_area .umino-sidebar_categories.umino-list-product_area .umino-categories_title {
+  margin-bottom: 30px;
+}
+
+.umino-content_wrapper .umino-sidebar-catagories_area .umino-sidebar_categories.umino-list-product_area .list-product_slider .slide-item .single-product .product-img {
+  width: 70px;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .umino-content_wrapper .umino-sidebar-catagories_area .umino-sidebar_categories.umino-list-product_area .list-product_slider .slide-item .single-product .product-img {
+    width: 60px;
+  }
+}
+
+.umino-content_wrapper .umino-sidebar-catagories_area .umino-sidebar_categories.umino-list-product_area .list-product_slider .slide-item .single-product .product-content {
+  width: calc(100% - 70px);
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .umino-content_wrapper .umino-sidebar-catagories_area .umino-sidebar_categories.umino-list-product_area .list-product_slider .slide-item .single-product .product-content {
+    width: calc(100% - 60px);
+  }
+}
+
+.umino-content_wrapper .umino-sidebar-catagories_area .umino-sidebar_categories.umino-list-product_area .list-product_slider .slide-item .single-product .product-content > h6.product-name {
+  margin-bottom: 0;
+  padding-bottom: 10px;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .umino-content_wrapper .umino-sidebar-catagories_area .umino-sidebar_categories.umino-list-product_area .list-product_slider .slide-item .single-product .product-content > h6.product-name {
+    font-size: 13px;
+  }
+}
+
+.umino-content_wrapper .umino-sidebar-catagories_area .umino-sidebar_categories.umino-list-product_area .list-product_slider .slide-item .single-product .product-content .price-box .new-price {
+  color: #e01212;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .umino-content_wrapper .umino-sidebar-catagories_area .umino-sidebar_categories.umino-list-product_area .list-product_slider .slide-item .single-product .product-content .price-box .new-price {
+    font-size: 13px;
+  }
+}
+
+.umino-content_wrapper .umino-sidebar-catagories_area .umino-sidebar_categories.umino-list-product_area .list-product_slider .slide-item .single-product .product-content .price-box .new-price {
+  color: #e01212;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .umino-content_wrapper .umino-sidebar-catagories_area .umino-sidebar_categories.umino-list-product_area .list-product_slider .slide-item .single-product .product-content .price-box .new-price {
+    font-size: 13px;
+  }
+}
+
+.umino-content_wrapper .umino-sidebar-catagories_area .umino-sidebar_categories.umino-list-product_area .list-product_slider .slide-item .single-product .product-content .rating-box {
+  padding-bottom: 10px;
+}
+
+.umino-content_wrapper .umino-sidebar-catagories_area .umino-sidebar_categories.umino-list-product_area .list-product_slider .slide-item .single-product .product-content .rating-box > ul > li {
+  display: inline-block;
+}
+
+.umino-content_wrapper .umino-sidebar-catagories_area .umino-sidebar_categories.umino-list-product_area .list-product_slider .slide-item .single-product .product-content .rating-box > ul > li > i {
+  color: #fed100;
+}
+
+.umino-content_wrapper .umino-sidebar-catagories_area .umino-sidebar_categories.umino-list-product_area .list-product_slider .slick-arrow {
+  top: -80px;
+}
+
+.umino-content_wrapper .umino-sidebar-catagories_area .umino-sidebar_categories.umino-list-product_area.compare-list-product_area {
+  padding-top: 0;
+}
+
+.umino-content_wrapper .shop-banner_area {
+  padding-bottom: 25px;
+}
+
+
+
+
+
+
+
+
